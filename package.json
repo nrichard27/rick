@@ -1,0 +1,40 @@
+{
+    "name": "rick",
+    "private": true,
+    "version": "1.0.0",
+    "description": "A Discord music bot with YouTube and Spotify support.",
+    "author": "midnightmqs <midnightmarquess@proton.me> (https://midnightmqs.hu)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/midnightmqs/rick"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+        "dev": "tsc && node -r dotenv/config .",
+        "prod": "node .",
+        "build": "tsc",
+        "watch": "nodemon -r dotenv/config src/index.ts",
+        "deploy-commands": "tsc && node dist/deploy-commands.js"
+    },
+    "devDependencies": {
+        "@types/node": "^20.8.10",
+        "@typescript-eslint/eslint-plugin": "^6.9.1",
+        "@typescript-eslint/parser": "^6.9.1",
+        "dotenv": "^16.3.1",
+        "eslint": "^8.52.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.1",
+        "nodemon": "^3.0.1",
+        "prettier": "^3.0.3",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "@discordjs/voice": "^0.16.0",
+        "discord.js": "^14.13.0",
+        "ffmpeg-static": "^5.2.0",
+        "libsodium-wrappers": "^0.7.13",
+        "play-dl": "^1.9.7"
+    }
+}
